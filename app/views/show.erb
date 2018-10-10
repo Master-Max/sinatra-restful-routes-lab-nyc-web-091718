@@ -1,0 +1,9 @@
+<div class="recipe">
+  <p>Name: <%= @recipe[:name] %></p>
+  <p>Ingredients: <%= @recipe[:ingredients] %></p>
+  <p>Cook Time: <%= @recipe[:cook_time] %></p>
+  <form action="/recipes/<%=@recipe[:id]%>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <button type="submit" value"submit">delete</button>
+  </form>
+</div>

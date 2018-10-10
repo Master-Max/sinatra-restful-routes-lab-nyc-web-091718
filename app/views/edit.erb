@@ -1,0 +1,15 @@
+<div class="recipe">
+  <p>Name: <%= @recipe[:name] %></p>
+  <p>Ingredients: <%= @recipe[:ingredients] %></p>
+  <p>Cook Time: <%= @recipe[:cook_time] %></p>
+</div>
+
+<h2>Edit Form</h2>
+
+<form action="/recipes/<%=@recipe[:id]%>/edit" method="post" id="edit_form">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <p>Name: <input type="text" name="name"></p>
+  <p>Ingredients: <input type="text" name="ingredients"></p>
+  <p>Cook Time: <input type="text" name="cook_time"></p>
+  <button type="submit" value"submit">submit</button>
+</form>
